@@ -2,11 +2,27 @@
 title: "Personnel"
 ---
 
+```{=html}
+<style>
+
+
+
+
+.person-card img{
+  object-fit:cover;
+  display:block;
+  border-radius:12px;
+}
+
+
+
+</style>
+```
+
 ## Principal Investigator
 
-::: {.person-card}
-
-<img src="images/people/pi.jpg" class="profile">
+:::: person-card
+<img src="images/people/pi.jpg" class="profile"/>
 
 <div>
 
@@ -16,21 +32,17 @@ Professor
 
 Research interests
 
-- Kidney organoids
-- Kidney disease
-- Genomics
-
+-   Kidney organoids
+-   Kidney disease
+-   Genomics
 
 </div>
-
-:::
-
+::::
 
 ## Staff
 
-::: {.person-card}
-
-<img src="images/people/Trang.jpg" class="profile">
+:::: person-card
+<img src="images/Trang.png" width="100"/>
 
 <div>
 
@@ -41,15 +53,10 @@ Lab Manager
 Responsible for laboratory management, colony, and daily operations.
 
 </div>
+::::
 
-:::
-
-
-
-
-::: {.person-card}
-
-<img src="images/people/alex.jpg" class="profile">
+:::: person-card
+<img src="images/people/alex.jpg" class="profile"/>
 
 <div>
 
@@ -59,20 +66,17 @@ Research Technician
 
 Research interests
 
-- Single-cell RNA-seq
-- Single-cell ATAC-seq
-- Computational biology
+-   Single-cell RNA-seq
+-   Single-cell ATAC-seq
+-   Computational biology
 
 </div>
-
-:::
-
+::::
 
 ## Students
 
-::: {.person-card}
-
-<img src="images/people/person2.jpg" class="profile">
+:::: person-card
+<img src="images/people/person2.jpg" class="profile"/>
 
 <div>
 
@@ -82,10 +86,9 @@ Ph.D. Student
 
 Research interests
 
-
-- Disease mechanisms
+-   Disease mechanisms
 
 </div>
+::::
 
-:::
----
+------------------------------------------------------------------------

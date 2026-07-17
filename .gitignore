@@ -1,0 +1,17 @@
+/.quarto/
+**/*.quarto_ipynb
+
+# Quarto generated files
+_site/
+
+# RStudio
+.Rproj.user/
+.Rhistory
+.RData
+
+# macOS
+.DS_Store
+
+# Temporary files
+*.tmp
+*.log

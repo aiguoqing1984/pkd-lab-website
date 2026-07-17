@@ -2,13 +2,13 @@ body {
     background-color: #333;
     color: #ffffff;
     font-family: "Helvetica Neue", Arial, sans-serif;
-
+    padding-top: 100px !important; 
 }
 
 
 /* Navigation Bar */
 .navbar {
-  background:#333 !important;
+  background:blue !important;
   position: sticky; 
   z-index: 999;   
 }
@@ -85,6 +85,6 @@ img.rounded {
 
 /* Hide page titles */
 #title-block-header {
-    display: none;!important;
+    display: none; !important;
 }
 

@@ -6,7 +6,7 @@ website:
   
   navbar:
     pinned: true
-    logo: images/thumbnail_image001.png
+    logo: images/logo.png
     search: false
     left:
       
@@ -26,7 +26,7 @@ website:
         href: Contact.qmd
 format:
   html:
-
+    anchor-sections: false
     css: styles.css
 
 

@@ -1,3 +1,4 @@
+```{=html}
 <style>
 
 .hero-banner{
@@ -11,7 +12,7 @@
     content:"";
     position:absolute;
     inset:0;
-    background:rgba(0,0,0,0.1);
+    
 }
 
 
@@ -19,7 +20,8 @@
   width:100%;
   height:auto;
   object-fit:cover;
-  display:block;
+  display:block;    
+  
 }
 
 .hero-overlay{
@@ -46,19 +48,16 @@
 }
 
 </style>
+```
 
-<div class="hero-banner">
+:::: hero-banner
+<img src="images/logo.png" width="500"/>
 
-<img src="images/thumbnail_image001.png" width="500">
-
-<div class="hero-overlay">
-
+::: hero-overlay
 <h>Welcome to Song Laboratory</h>
 
 <p>University of Alabama at Birmingham</p>
 
 <p>Department of Cell, Developmental, and Integrative Biology</p>
-
-</div>
-
-</div>
+:::
+::::
