@@ -4,14 +4,33 @@ title: "Personnel"
 
 ```{=html}
 <style>
-
-
-
-
 .person-card img{
   object-fit:cover;
   display:block;
   border-radius:12px;
+}
+
+.Alumni-nav{
+    display:block;
+    width:150px;
+    margin:40px auto;
+    padding:12px 24px;
+    text-align:center;
+    background:#2ca25f;
+    color:white;
+    text-decoration:none;
+    border-radius:999px;
+    transition:.2s;
+}
+
+.Alumni-nav:hover{
+    background:#238b45;
+    transform:translateY(-2px);
+}
+.person-card img{
+    object-fit:cover;
+    display:block;
+    border-radius:12px;
 }
 
 
@@ -60,7 +79,9 @@ Responsible for laboratory management, colony, and daily operations.
 
 <div>
 
-### Alex
+### Alex <a href="mailto:aig@uab.edu"><i class="bi bi-envelope-fill"></i></a> <a href="https://www.linkedin.com/in/yourname" target="_blank"><i class="bi bi-linkedin"></i></a> <a href="https://github.com/yourname" target="_blank"><i class="bi bi-github"></i></a>
+
+
 
 Research Technician
 
@@ -91,4 +112,4 @@ Research interests
 </div>
 ::::
 
-------------------------------------------------------------------------
+<a class="Alumni-nav" href="alumni.html"> View Alumni </a>
