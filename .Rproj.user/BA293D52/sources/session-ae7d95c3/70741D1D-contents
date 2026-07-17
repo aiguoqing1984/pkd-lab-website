@@ -1,0 +1,91 @@
+---
+title: "Personnel"
+---
+
+## Principal Investigator
+
+::: {.person-card}
+
+<img src="images/people/pi.jpg" class="profile">
+
+<div>
+
+### Dr. Cheng Jack Song
+
+Professor
+
+Research interests
+
+- Kidney organoids
+- Kidney disease
+- Genomics
+
+
+</div>
+
+:::
+
+
+## Staff
+
+::: {.person-card}
+
+<img src="images/people/Trang.jpg" class="profile">
+
+<div>
+
+### Trang
+
+Lab Manager
+
+Responsible for laboratory management, colony, and daily operations.
+
+</div>
+
+:::
+
+
+
+
+::: {.person-card}
+
+<img src="images/people/alex.jpg" class="profile">
+
+<div>
+
+### Alex
+
+Research Technician
+
+Research interests
+
+- Single-cell RNA-seq
+- Single-cell ATAC-seq
+- Computational biology
+
+</div>
+
+:::
+
+
+## Students
+
+::: {.person-card}
+
+<img src="images/people/person2.jpg" class="profile">
+
+<div>
+
+### A
+
+Ph.D. Student
+
+Research interests
+
+
+- Disease mechanisms
+
+</div>
+
+:::
+---

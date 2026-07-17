@@ -1,0 +1,122 @@
+---
+title: Research
+---
+
+<style>
+
+.research-card{
+    background:#333333;
+    padding:25px;
+    margin:20px 0;
+    border-radius:15px;
+    box-shadow:0 3px 10px rgba(0,0,0,.1);
+}
+
+.research-card img{
+    border-radius:12px;
+}
+
+.research-nav{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    margin:30px 0 50px;
+}
+
+.research-nav a{
+    padding:10px 24px;
+    border:2px solid #2ca25f;
+    border-radius:999px;
+    text-decoration:none;
+    color:#2ca25f;
+    font-weight:600;
+    transition:.2s;
+}
+
+.research-nav a:hover{
+    background:#2ca25f;
+    color:white;
+}
+
+</style>
+
+::: {.research-nav}
+
+[Kidney Disease](#kidney)
+
+[Single-cell Genomics](#singlecell)
+
+[Disease Modeling](#model)
+
+:::
+
+:::: {.columns}
+
+::: {.column width="60%"}
+
+## Research Overview
+
+Our laboratory focuses on understanding molecular mechanisms underlying kidney disease using integrated genomic approaches. We combine single-cell transcriptomics, single-cell epigenomics, organoid models, and computational biology to investigate disease progression and therapeutic targets.
+:::
+
+::: {.column width="40%"}
+
+![](images/IF.png)
+
+:::
+
+::::
+
+## {#kidney} Kidney Disease Mechanisms
+
+:::: {.columns}
+
+::: {.column width="60%"}
+
+We study genetic and molecular mechanisms driving kidney diseases, including cyst formation, epithelial dysfunction, and cellular remodeling.
+
+:::
+
+::: {.column width="40%"}
+
+![](images/g.jpg)
+
+:::
+
+::::
+
+## {#singlecell} Single-cell Genomics
+
+:::: {.columns}
+
+::: {.column width="60%"}
+
+Using single-cell RNA sequencing and ATAC sequencing, we characterize cell-type specific regulatory programs.
+
+:::
+
+::: {.column width="40%"}
+
+![](images/f.png)
+
+:::
+
+::::## {#model} Disease Modeling
+
+:::: {.columns}
+
+::: {.column width="60%"}
+
+Human kidney organoids provide a platform to study genetic mutations and disease phenotypes.
+
+:::
+
+::: {.column width="40%"}
+
+![](images/org.png)
+
+:::
+
+::::
+
+---
