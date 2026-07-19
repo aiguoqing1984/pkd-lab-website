@@ -24,8 +24,14 @@ website:
 
       - text: Contact
         href: Contact.qmd
+        
+      - href: gallery.qmd
+        text: Lab Gallery
+
+
 format:
   html:
+    page-layout: full
     anchor-sections: false
     css: styles.css
 

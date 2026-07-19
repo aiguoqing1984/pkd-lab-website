@@ -1,0 +1,106 @@
+---
+title: "Personnel"
+---
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+```{=html}
+<style>
+
+/* 头像样式 */
+.profile {
+  width: 100%;
+  border-radius: 30%;
+  display: block;
+  background: #444;
+}
+.columns > .column:first-child {
+  padding-right: 50px;
+}
+
+.Alumni-nav{
+    display:block;
+    width:150px;
+    margin:40px auto;
+    padding:12px 24px;
+    text-align:center;
+    background:#2ca25f;
+    color:white;
+    text-decoration:none;
+    border-radius:999px;
+    transition:.2s;
+}
+
+.Alumni-nav:hover{
+    background:#238b45;
+    transform:translateY(-2px);
+}
+
+</style>
+```
+
+## Principal Investigator
+
+::::: columns
+::: {.column width="40%"}
+![](images/Members/jack.jpg){.profile}
+:::
+
+::: {.column width="60%"}
+### Dr. Cheng Jack Song
+
+Professor
+
+Kidney organoids · Kidney disease · Genomics
+:::
+:::::
+
+## Staff
+
+::::: columns
+::: {.column width="22%"}
+![](images/Trang.png){.profile}
+:::
+
+::: {.column width="78%"}
+### Trang
+
+Lab Manager
+
+Responsible for laboratory management, colony, and daily operations.
+:::
+:::::
+
+::::: columns
+::: {.column width="22%"}
+![](Members/Alex.jpg){.profile}
+:::
+
+::: {.column width="78%"}
+### Alex
+
+<a href="mailto:aig@uab.edu"><i class="fa-regular fa-envelope" style="color: #2ca25f;"></i></a> <a href="https://github.com/yourname" target="_blank"><i class="fa-brands fa-github" style="color: #ffffff;"></i></a>
+
+Research Technician
+
+Single-cell RNA-seq · Single-cell ATAC-seq · Computational biology
+:::
+:::::
+
+## Students
+
+::::: columns
+::: {.column width="22%"}
+![](images/people/person2.jpg){.profile}
+:::
+
+::: {.column width="78%"}
+### A
+
+Ph.D. Student
+
+Disease mechanisms
+:::
+:::::
+
+<a class="Alumni-nav" href="alumni.html"> View Alumni </a>

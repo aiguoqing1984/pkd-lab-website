@@ -1,0 +1,406 @@
+---
+title: "Lab Gallery"
+format:
+  html:
+    page-layout: full
+    toc: false
+resources:
+  - images/memory/**
+  - memory.json
+---
+
+```{r}
+#| echo: false
+#| output: false
+#| warning: false
+#| message: false
+
+library(jsonlite)
+
+files <- list.files(
+  "images/memory",
+  recursive = TRUE,
+  full.names = TRUE
+)
+
+files <- files[
+  grepl(
+    "\\.(jpg|jpeg|png|gif|webp|mp4|mov)$",
+    files,
+    ignore.case = TRUE
+  )
+]
+
+memory <- data.frame(
+
+  year = basename(dirname(files)),
+
+  file = files,
+
+  type = ifelse(
+    grepl("\\.(mp4|mov)$", files, ignore.case = TRUE),
+    "video",
+    "image"
+  )
+
+)
+
+memory <- memory[order(memory$year, memory$file), ]
+
+write_json(
+  memory,
+  "memory.json",
+  auto_unbox = TRUE,
+  pretty = TRUE
+)
+
+```
+
+::: {#memory-wall .memory-wall}
+:::
+
+```{=html}
+<script>
+// ============================================================
+//  数据加载
+// ============================================================
+let allData = [];
+
+fetch("memory.json")
+  .then(r => r.json())
+  .then(data => {
+    allData = data;
+    renderWall(data);
+  });
+
+// ============================================================
+//  渲染交错卡片
+// ============================================================
+function renderWall(data) {
+  const wall = document.getElementById("memory-wall");
+  wall.innerHTML = "";
+  const years = [...new Set(data.map(d => d.year))].sort().reverse();
+
+  years.forEach(year => {
+    const cover = data.find(d => d.year == year);
+    const card = document.createElement("div");
+    card.className = "memory-card";
+    card.dataset.year = year;
+    card.dataset.cover = cover.file;
+    card.innerHTML = `
+      <img src="${cover.file}" loading="lazy">
+      <div class="overlay"><span>${year}</span></div>
+    `;
+    card.addEventListener("click", function(e) {
+      e.preventDefault();
+      triggerDoorOpen(this, year);
+    });
+    wall.appendChild(card);
+  });
+}
+
+// ============================================================
+//  🚪 开门效果（强化光效 + 厚重感）
+// ============================================================
+function triggerDoorOpen(card, year) {
+  if (card.dataset.animating === "true") return;
+  card.dataset.animating = "true";
+
+  // 1. 获取卡片位置和尺寸
+  const rect = card.getBoundingClientRect();
+  const cardW = rect.width;
+  const cardH = rect.height;
+  const centerX = rect.left + cardW / 2;
+  const centerY = rect.top + cardH / 2;
+
+  // 2. 创建门容器
+  const doorContainer = document.createElement("div");
+  doorContainer.className = "door-container";
+  Object.assign(doorContainer.style, {
+    position: "fixed",
+    left: rect.left + "px",
+    top: rect.top + "px",
+    width: cardW + "px",
+    height: cardH + "px",
+    zIndex: "9999",
+    perspective: "1400px",
+    pointerEvents: "none",
+  });
+  document.body.appendChild(doorContainer);
+
+  // 3. 获取卡片图片
+  const imgSrc = card.querySelector("img").src;
+
+  // 4. 创建左门板
+  const leftDoor = document.createElement("div");
+  leftDoor.className = "door-panel left-door";
+  Object.assign(leftDoor.style, {
+    position: "absolute",
+    left: "0",
+    top: "0",
+    width: "50%",
+    height: "100%",
+    backgroundImage: `url(${imgSrc})`,
+    backgroundSize: "200% 100%",
+    backgroundPosition: "0% 50%",
+    transformOrigin: "left center",
+    transform: "rotateY(0deg)",
+    borderRadius: "200px 0 0 200px",
+    boxShadow: "inset -2px 0 20px rgba(0,0,0,0.4), 0 4px 30px rgba(0,0,0,0.3)",
+    backfaceVisibility: "hidden",
+    transition: "transform 1.5s cubic-bezier(0.4, 0.0, 0.2, 1)",  // 🔥 延长到1.2s
+    willChange: "transform",
+  });
+  doorContainer.appendChild(leftDoor);
+
+  // 5. 创建右门板
+  const rightDoor = document.createElement("div");
+  rightDoor.className = "door-panel right-door";
+  Object.assign(rightDoor.style, {
+    position: "absolute",
+    right: "0",
+    top: "0",
+    width: "50%",
+    height: "100%",
+    backgroundImage: `url(${imgSrc})`,
+    backgroundSize: "200% 100%",
+    backgroundPosition: "100% 50%",
+    transformOrigin: "right center",
+    transform: "rotateY(0deg)",
+    borderRadius: "0 200px 200px 0",
+    boxShadow: "inset 2px 0 20px rgba(0,0,0,0.4), 0 4px 30px rgba(0,0,0,0.3)",
+    backfaceVisibility: "hidden",
+    transition: "transform 1.5s cubic-bezier(0.4, 0.0, 0.2, 1)",  // 🔥 延长到1.2s
+    willChange: "transform",
+  });
+  doorContainer.appendChild(rightDoor);
+
+  // 6. 🔥 强化光效：门缝光芒（多层叠加）
+  // 6a. 主光柱（从门缝向两侧扩散）
+  const glowMain = document.createElement("div");
+  glowMain.className = "door-glow-main";
+  Object.assign(glowMain.style, {
+    position: "absolute",
+    left: "50%",
+    top: "0",
+    width: "0px",
+    height: "100%",
+    transform: "translateX(-50%)",
+    background: "linear-gradient(to right, transparent, rgba(150, 230, 255, 0.9), rgba(255, 255, 255, 1), rgba(150, 230, 255, 0.9), transparent)",
+    boxShadow: "0 0 60px rgba(100, 200, 255, 0.6), 0 0 120px rgba(100, 200, 255, 0.3), 0 0 200px rgba(50, 150, 255, 0.15)",
+    opacity: "0",
+    transition: "opacity 0.3s ease, width 0.8s ease",
+    willChange: "opacity, width",
+    zIndex: "1",
+  });
+  doorContainer.appendChild(glowMain);
+
+  // 6b. 左侧光晕（照亮左留白）
+  const glowLeft = document.createElement("div");
+  glowLeft.className = "door-glow-left";
+  Object.assign(glowLeft.style, {
+    position: "absolute",
+    left: "-80%",
+    top: "0",
+    width: "80%",
+    height: "100%",
+    background: "radial-gradient(ellipse at right center, rgba(100, 200, 255, 0.4) 0%, rgba(100, 200, 255, 0.1) 50%, transparent 80%)",
+    opacity: "0",
+    transition: "opacity 0.6s ease 0.4s",
+    willChange: "opacity",
+    zIndex: "0",
+    pointerEvents: "none",
+  });
+  doorContainer.appendChild(glowLeft);
+
+  // 6c. 右侧光晕（照亮右留白）
+  const glowRight = document.createElement("div");
+  glowRight.className = "door-glow-right";
+  Object.assign(glowRight.style, {
+    position: "absolute",
+    right: "-80%",
+    top: "0",
+    width: "80%",
+    height: "100%",
+    background: "radial-gradient(ellipse at left center, rgba(100, 200, 255, 0.4) 0%, rgba(100, 200, 255, 0.1) 50%, transparent 80%)",
+    opacity: "0",
+    transition: "opacity 0.6s ease 0.4s",
+    willChange: "opacity",
+    zIndex: "0",
+    pointerEvents: "none",
+  });
+  doorContainer.appendChild(glowRight);
+
+  // 6d. 中心光球（门缝核心光源）
+  const glowCenter = document.createElement("div");
+  glowCenter.className = "door-glow-center";
+  Object.assign(glowCenter.style, {
+    position: "absolute",
+    left: "50%",
+    top: "50%",
+    width: "40px",
+    height: "40px",
+    transform: "translate(-50%, -50%)",
+    background: "radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(150, 230, 255, 0.8) 30%, rgba(100, 200, 255, 0.3) 60%, transparent 80%)",
+    borderRadius: "50%",
+    boxShadow: "0 0 80px rgba(150, 230, 255, 0.8), 0 0 160px rgba(100, 200, 255, 0.4)",
+    opacity: "0",
+    transition: "opacity 0.4s ease 0.2s, transform 1s ease",
+    willChange: "opacity, transform",
+    zIndex: "2",
+  });
+  doorContainer.appendChild(glowCenter);
+
+  // 7. 🔥 触发开门动画
+  requestAnimationFrame(() => {
+    // 光效渐显
+    glowMain.style.opacity = "1";
+    glowMain.style.width = "90%";  // 光柱扩散到卡片的60%宽度
+    
+    glowLeft.style.opacity = "1";
+    glowRight.style.opacity = "1";
+    glowCenter.style.opacity = "1";
+    glowCenter.style.transform = "translate(-50%, -50%) scale(3)";
+    
+    // 门板打开（角度加大，更有开门感）
+    leftDoor.style.transform = "rotateY(-150deg)";
+    rightDoor.style.transform = "rotateY(150deg)";
+  });
+
+  // 8. 卡片淡出
+  card.classList.add("flying-out");
+
+  // 9. 🔥 开门完成后跳转（延长到1.4s，让厚重感充分展现）
+  setTimeout(() => {
+    doorContainer.remove();
+    card.classList.remove("flying-out");
+    card.dataset.animating = "false";
+    window.location.href = `memory-year.html?year=${year}`;
+  }, 700);
+}
+</script>
+
+
+
+<style>
+.memory-wall{
+max-width:800px;
+margin:70px auto;
+display:flex;
+flex-direction:column;
+gap:50px;
+}
+
+
+.memory-card{
+width:75%;
+position:relative;
+display:block;
+overflow:hidden;
+border-radius:200px;
+background:#eee;
+aspect-ratio:16/9;
+text-decoration:none;
+transition:.25s;
+}
+
+.memory-card:nth-child(odd){
+margin-right:auto;
+}
+
+.memory-card:nth-child(even){
+margin-left:auto;
+}
+
+.memory-card img{
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+}
+
+.overlay{
+position:absolute;
+inset:0;
+display:flex;
+justify-content:center;
+align-items:flex-start;
+padding-top:0.3%;
+font-size:44px;
+font-weight:600;
+letter-spacing:6px;
+color:#ffffff;
+text-shadow:
+0 2px 10px rgba(0,0,0,.45);
+background:
+rgba(0,0,0,.12);
+transition:.25s;
+}
+.memory-card:hover{
+transform:scale(1.08);
+}
+.memory-card:hover .overlay{
+background:rgba(0,0,0,.18);
+}
+
+.memory-card.opening{
+transform:scale(1.1);
+opacity:.65;
+transition:.28s ease;
+}
+
+
+
+/* ===== 开门效果 ===== */
+.door-container {
+  pointer-events: none;
+}
+
+.door-panel {
+  pointer-events: none;
+  box-shadow: inset 0 0 30px rgba(0,0,0,0.3);
+}
+
+/* 门板边缘高光（金属质感） */
+.left-door::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(255,255,255,0.05));
+  border-radius: 0 2px 2px 0;
+}
+
+.right-door::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(255,255,255,0.05));
+  border-radius: 2px 0 0 2px;
+}
+
+/* 门板木质/金属纹理感（微妙的噪点） */
+.door-panel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(ellipse at 20% 50%, rgba(255,255,255,0.03) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 50%, rgba(255,255,255,0.03) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* 卡片淡出 */
+.memory-card.flying-out {
+  transform: scale(1.05);
+  opacity: 0;
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.4s ease;
+}
+
+</style>
+```

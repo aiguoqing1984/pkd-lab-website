@@ -53,7 +53,7 @@
 ```
 
 :::: hero-banner
-<img src="images/lab_p.png" width="500"/>
+<img src="images/lab_p.png">
 
 ::: hero-overlay
 <h>Welcome to Song Laboratory</h>
