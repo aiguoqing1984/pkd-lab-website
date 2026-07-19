@@ -9,52 +9,7 @@ resources:
   - memory.json
 ---
 
-```{r}
-#| echo: false
-#| output: false
-#| warning: false
-#| message: false
 
-library(jsonlite)
-
-files <- list.files(
-  "images/memory",
-  recursive = TRUE,
-  full.names = TRUE
-)
-
-files <- files[
-  grepl(
-    "\\.(jpg|jpeg|png|gif|webp|mp4|mov)$",
-    files,
-    ignore.case = TRUE
-  )
-]
-
-memory <- data.frame(
-
-  year = basename(dirname(files)),
-
-  file = files,
-
-  type = ifelse(
-    grepl("\\.(mp4|mov)$", files, ignore.case = TRUE),
-    "video",
-    "image"
-  )
-
-)
-
-memory <- memory[order(memory$year, memory$file), ]
-
-write_json(
-  memory,
-  "memory.json",
-  auto_unbox = TRUE,
-  pretty = TRUE
-)
-
-```
 
 ::: {#memory-wall .memory-wall}
 :::
