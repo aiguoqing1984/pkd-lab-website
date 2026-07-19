@@ -48,7 +48,7 @@ title: "Personnel"
 
 ::::: columns
 ::: {.column width="40%"}
-![](images/Members/jack.jpg){.profile}
+![](images/Members/Jack.jpg){.profile}
 :::
 
 ::: {.column width="60%"}
@@ -78,7 +78,7 @@ title: "Personnel"
 
 ::::: columns
 ::: {.column width="40%"}
-![](images/Members/alex.jpg){.profile}
+![](images/Members/Alex.jpg){.profile}
 :::
 
 ::: {.column width="60%"}
