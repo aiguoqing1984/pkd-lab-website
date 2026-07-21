@@ -2,20 +2,19 @@ project:
   type: website
 
 website:
-  title: ""
+  title: "Song Lab"
   site-url: https://aiguoqing1984.github.io/pkd-lab-website/
-  navbar:
+  navbar:          
     pinned: true
-    logo: images/logo.png
+    logo: images/logo1.png
     search: false
     left:
-      
       - text: Research
-        href: research/research_index.qmd
-
+        href: research.qmd
+        
       - text: Personnel
         href: Personnel.qmd
-
+        
       - text: Publications
         href: Publications.qmd
 
@@ -28,13 +27,13 @@ website:
       - href: gallery.qmd
         text: Lab Gallery
 
-
+      - href: test.qmd
+        text: test
 format:
   html:
     page-layout: full
     anchor-sections: false
     css: styles.css
-
-
-
-
+    
+    
+    

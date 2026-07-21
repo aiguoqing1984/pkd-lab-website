@@ -9,8 +9,6 @@ resources:
   - memory.json
 ---
 
-
-
 ::: {#memory-wall .memory-wall}
 :::
 

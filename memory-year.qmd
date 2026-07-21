@@ -27,15 +27,14 @@ resources:
   top: 200px;
   left: 30px;
   z-index: 1000;
-
   font-size: 40px;
   font-weight: 700;
   letter-spacing: 3px;
   color: #ffffff;
   /* 光晕效果 */
   text-shadow: 
-    0 0 20px rgba(100, 200, 255, 0.15),
-    0 0 40px rgba(100, 200, 255, 0.15);
+    0 0 20px rgba(100, 200, 255, 0.8),
+    0 0 40px rgba(100, 200, 255, 0.8);
   transition: text-shadow 0.5s ease;
 }
 #back {
@@ -44,11 +43,11 @@ resources:
   right: 30px;
   z-index: 1000;
   background: rgba(255,255,255,0.06);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-radius: 50%;
   border: 1px solid rgba(255,255,255,0.06);
-  box-shadow: 0 0 20px rgba(100, 200, 255, 0.15);
+  box-shadow: 0 0 20px rgba(100, 200, 255, 1);
   transition: box-shadow 0.3s ease, background 0.3s ease, transform 0.3s ease;
   animation: breathe 2.5s ease-in-out infinite;
   cursor: pointer;

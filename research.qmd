@@ -25,11 +25,13 @@ title: Research
 }
 
 .research-nav a,
-.research-nav .active-tab{
-    padding:10px 22px;
-    border:2px solid #2ca25f;
-    border-radius:999px;
-    text-decoration:none;
+.research-nav .active-tab {
+  padding: 10px 22px;
+  border: 2px solid #2ca25f;
+  border-radius: 999px;
+  text-decoration: none;
+  min-width: 120px;          /* ← 固定最小宽度 */
+  text-align: center;
 }
 
 .research-nav a{
@@ -39,12 +41,6 @@ title: Research
 .research-nav a:hover{
     background:#2ca25f;
     color:white;
-}
-
-.research-nav .active-tab{
-    background:#2ca25f;
-    color:white;
-    font-weight:600;
 }
 
 </style>
@@ -59,15 +55,15 @@ title: Research
 
 [Disease Modeling](modeling.qmd)
 :::
-
+## Research Overview
 ::::: columns
 ::: {.column width="70%"}
-## Research Overview
+
 
 Our laboratory focuses on understanding molecular mechanisms underlying kidney disease using integrated genomic approaches. We combine single-cell transcriptomics, single-cell epigenomics, organoid models, and computational biology to investigate disease progression and therapeutic targets.
 :::
 
 ::: {.column width="30%"}
-![](../images/g.jpg)
+![](images/g.jpg)
 :::
 :::::

@@ -1,0 +1,74 @@
+---
+title: "kidney"
+---
+
+```{=html}
+<style>
+.research-nav{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin:30px 0;flex-wrap:wrap;
+}
+
+.research-nav a,
+.research-nav .active-tab {
+  padding: 10px 22px;
+  border: 2px solid #2ca25f;
+  border-radius: 999px;
+  text-decoration: none;
+  min-width: 120px;          /* ← 固定最小宽度 */
+  text-align: center;
+}
+
+.research-nav a{
+    color:#2ca25f;
+}
+
+.research-nav a:hover{
+    background:#2ca25f;
+    color:white;
+}
+
+</style>
+```
+
+::: research-nav
+[Overview](research.qmd)
+
+[Kidney Disease]{.active-tab}
+
+[Single-cell Genomics](genomics.qmd)
+
+[Disease Modeling](modeling.qmd)
+:::
+
+## Kidney Disease Mechanisms
+
+::::: columns
+::: {.column width="60%"}
+We study genetic and molecular mechanisms driving kidney diseases, including cyst formation, epithelial dysfunction, and cellular remodeling.
+:::
+
+::: {.column width="40%"}
+![](images/g.jpg)
+:::
+:::::
+
+<div class="project-title">🔬 Kidney Disease</div>
+
+<div class="project-card">
+  abc
+</div>
+
+<div class="project-subtitle">abc</div>
+
+<ul>
+  <li>abc</li>
+  <li>abc二</li>
+</ul>
+
+
+Research Overview
+
+<div class="project-title">Kidney Disease</div><div class="project-card"> Our research focuses on understanding the molecular mechanisms underlying kidney disease. We combine advanced genomic approaches with organoid models to dissect disease pathways and identify therapeutic targets. </div><div class="project-subtitle">Key Approaches</div><div class="project-card"> <ul> <li>Kidney organoid culture and differentiation</li> <li>Single-cell RNA sequencing</li> <li>CRISPR-based functional screening</li> </ul> </div><div class="section-divider"></div><div class="project-title">Single-cell Genomics</div><div class="project-card"> a </div><div class="project-title">Disease Modeling</div><div class="project-card"> b </div> ```

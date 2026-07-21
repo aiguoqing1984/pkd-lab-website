@@ -1,7 +1,8 @@
 ---
 title: "modeling"
-editor: visual
 ---
+
+```{=html}
 <style>
 .research-nav{
     display:flex;
@@ -11,11 +12,13 @@ editor: visual
 }
 
 .research-nav a,
-.research-nav .active-tab{
-    padding:10px 22px;
-    border:2px solid #2ca25f;
-    border-radius:999px;
-    text-decoration:none;
+.research-nav .active-tab {
+  padding: 10px 22px;
+  border: 2px solid #2ca25f;
+  border-radius: 999px;
+  text-decoration: none;
+  min-width: 120px;          /* ← 固定最小宽度 */
+  text-align: center;
 }
 
 .research-nav a{
@@ -27,42 +30,28 @@ editor: visual
     color:white;
 }
 
-.research-nav .active-tab{
-    background:#2ca25f;
-    color:white;
-    font-weight:600;
-}
 
 </style>
+```
 
-::: {.research-nav}
-
-[Overview](research_index.qmd)
+::: research-nav
+[Overview](research.qmd)
 
 [Kidney Disease](kidney.qmd)
 
 [Single-cell Genomics](genomics.qmd)
 
-<span class="active-tab">Disease Modeling</span>
-
+[Disease Modeling]{.active-tab}
 :::
 
-##  Disease Modeling
+## Disease Modeling
 
-:::: {.columns}
-
+::::: columns
 ::: {.column width="60%"}
-
 Human kidney organoids provide a platform to study genetic mutations and disease phenotypes.
-
 :::
 
 ::: {.column width="40%"}
-
-![](../images/org.png)
-
+![](images/org.png)
 :::
-
-::::
-
----
+:::::
