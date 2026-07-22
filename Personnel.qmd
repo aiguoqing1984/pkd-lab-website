@@ -351,4 +351,5 @@ Disease mechanisms
 
 
 -----------------------------------------------------
-<a class="Alumni-nav" href="Alumni.html"> Alumni </a>
+
+<a class="Alumni-nav" href="alumni.html"> Alumni </a>
