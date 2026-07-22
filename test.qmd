@@ -157,3 +157,27 @@ fetch("memory.json")
 });
 </script>
 ```
+
+
+
+
+
+:::::::: columns
+::: {.column width="30%"}
+![](images/Members/Mead.jpg){.profile}
+:::
+:::::: {.column width="60%"}
+<div>
+<h3>Mead Arabie <a href="mailto:wmarabie@uab.edu"><i class="fa-regular fa-envelope" style="color: #2ca25f;"></i></a> <!-- 
+    <a href="https://www.linkedin.com/in/aname" target="_blank"><i class="fa-brands fa-linkedin" style="color: #0A66C2;"></i></a>
+    <a href="https://github.com/aname" target="_blank"><i class="fa-brands fa-github" style="color: #ffffff;"></i></a>
+    --></h3>
+::: title
+Undergraduate Student
+:::
+::: interests
+Disease mechanisms
+:::
+</div>
+::::::
+::::::::

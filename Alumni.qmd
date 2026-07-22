@@ -1,26 +1,38 @@
 
+```{=html}
+<style>
+
+/* 头像样式 */
+.profile {
+  width: 100%;
+  border-radius: 30%;
+  display: block;
+  background: #444;
+}
+.columns > .column:first-child {
+  padding-right: 50px;
+}
+</style>
+```
 
 # Alumni
 
-## Graduate Students
+:::::::: columns
+::: {.column width="20%"}
+![](images/Members/Arnav.jpg){.profile}
+:::
 
-### B
+:::::: {.column width="40%"}
+<div>
 
-Ph.D. (2025)
+<h3>Arnav</h3>
+::: title
+Undergraduate Student
+::: 
+::: interests
+Kidney organoids · Kidney disease · Genomics
+:::
 
-Current Position: Assistant Professor, XXX University
-
-------------------------------------------------------------------------
-
-### A
-
-M.S. (2024)
-
-Current Position: Scientist, Company ABC
-
-------------------------------------------------------------------------
-
-## Undergraduate Students
-
-
-## Visiting Scholars
+</div>
+::::::
+::::::::

@@ -46,7 +46,7 @@ title: "Personnel"
 ## Principal Investigator
 
 :::::::: columns
-::: {.column width="40%"}
+::: {.column width="30%"}
 ![](images/Members/Jack.jpg){.profile}
 :::
 
@@ -70,14 +70,14 @@ Kidney organoids · Kidney disease · Genomics
 ## Staff
 
 :::::::: columns
-::: {.column width="40%"}
+::: {.column width="30%"}
 ![](images/Members/Trang's%20image.png){.profile}
 :::
 
 :::::: {.column width="60%"}
 <div>
 
-<h3>Trang</h3>
+<h3>Trang Nguyen <a href="mailto:tnguye32@uab.edu"><i class="fa-regular fa-envelope" style="color: #2ca25f;"></i></a></h3>
 
 ::: title
 Lab Manager
@@ -92,11 +92,11 @@ Responsible for laboratory management, colony, and daily operations.
 ::::::::
 
 :::::::: columns
-::: {.column width="40%"}
+::: {.column width="30%"}
 ![](images/Members/Alex.jpg){.profile}
 :::
 
-:::::: {.column width="60%"}
+:::: {.column width="60%"}
 <div>
 
 <h3>Alex <a href="mailto:aig@uab.edu"><i class="fa-regular fa-envelope" style="color: #2ca25f;"></i></a> <a href="https://github.com/yourname" target="_blank"><i class="fa-brands fa-github" style="color: white;" ></i></a> <a href="https://orcid.org/0009-0008-1691-8437" target="_blank"><i class="fa-brands fa-orcid" style="color: #A6CE39;"></i></a> <a href="https://scholar.google.com/citations?user=your-id" target="_blank"><i class="fa-brands fa-google-scholar"></i></a> <!-- 
@@ -109,23 +109,47 @@ Responsible for laboratory management, colony, and daily operations.
     <a href="https://bsky.app/profile/yourname" target="_blank"><i class="fa-brands fa-bluesky" style="color: #1185FE;"></i></a>
     <a href="https://www.researchgate.net/profile/yourname" target="_blank"><i class="fa-brands fa-researchgate" style="color: #00CCBB;"></i></a>
     --></h3>
-</div>
-::::::
 
 ::: title
 Research Technician
 :::
-
-::: interests
-Single-cell RNA-seq · Single-cell ATAC-seq · Computational biology
+::: bio
+interests Single-cell RNA-seq · Single-cell ATAC-seq · Computational biology
 :::
 
+</div>
+::::::
 ::::::::
 
 ## Students
 
 :::::::: columns
-::: {.column width="40%"}
+::: {.column width="30%"}
+![](images/Members/owen.jpg){.profile}
+:::
+
+:::::: {.column width="60%"}
+<div>
+
+<h3>Owen Smith <a href="mailto:osmith5@uab.edu"><i class="fa-regular fa-envelope" style="color: #2ca25f;"></i></a> <!-- 
+    <a href="https://www.linkedin.com/in/aname" target="_blank"><i class="fa-brands fa-linkedin" style="color: #0A66C2;"></i></a>
+    <a href="https://github.com/aname" target="_blank"><i class="fa-brands fa-github" style="color: #ffffff;"></i></a>
+    --></h3>
+
+::: title
+Ph.D. Student
+:::
+
+::: interests
+Disease mechanisms
+:::
+
+</div>
+::::::
+::::::::
+
+:::::::: columns
+::: {.column width="30%"}
 ![](images/Members/hayden.jpg){.profile}
 :::
 
@@ -147,6 +171,184 @@ Disease mechanisms
 
 </div>
 ::::::
-
-<a class="Alumni-nav" href="alumni.html"> Alumni </a>
 ::::::::
+
+:::::::: columns
+::: {.column width="30%"}
+![](images/Members/Torrey.jpg){.profile}
+:::
+
+:::::: {.column width="60%"}
+<div>
+
+<h3>Torrey Flournoy <a href="mailto:Flournot@uab.edu"><i class="fa-regular fa-envelope" style="color: #2ca25f;"></i></a> <!-- 
+    <a href="https://www.linkedin.com/in/aname" target="_blank"><i class="fa-brands fa-linkedin" style="color: #0A66C2;"></i></a>
+    <a href="https://github.com/aname" target="_blank"><i class="fa-brands fa-github" style="color: #ffffff;"></i></a>
+    --></h3>
+
+::: title
+Ph.D. Student
+:::
+
+::: interests
+Disease mechanisms
+:::
+
+</div>
+::::::
+::::::::
+
+:::::::: columns
+::: {.column width="30%"}
+![](images/Members/Palak.jpg){.profile}
+:::
+
+:::::: {.column width="60%"}
+<div>
+
+<h3>Palak Desai <a href="mailto:phdesai@uab.edu"><i class="fa-regular fa-envelope" style="color: #2ca25f;"></i></a> <!-- 
+    <a href="https://www.linkedin.com/in/aname" target="_blank"><i class="fa-brands fa-linkedin" style="color: #0A66C2;"></i></a>
+    <a href="https://github.com/aname" target="_blank"><i class="fa-brands fa-github" style="color: #ffffff;"></i></a>
+    --></h3>
+
+::: title
+Undergraduate Student
+:::
+
+::: interests
+Disease mechanisms
+:::
+
+</div>
+::::::
+::::::::
+
+:::::::: columns
+::: {.column width="30%"}
+![](images/Members/Ray.jpg){.profile}
+:::
+
+:::::: {.column width="60%"}
+<div>
+
+<h3>Ray Ding <a href="mailto:dingr@uab.edu"><i class="fa-regular fa-envelope" style="color: #2ca25f;"></i></a> <!-- 
+    <a href="https://www.linkedin.com/in/aname" target="_blank"><i class="fa-brands fa-linkedin" style="color: #0A66C2;"></i></a>
+    <a href="https://github.com/aname" target="_blank"><i class="fa-brands fa-github" style="color: #ffffff;"></i></a>
+    --></h3>
+
+::: title
+Undergraduate Student
+:::
+
+::: interests
+Disease mechanisms
+:::
+
+</div>
+::::::
+
+::::::::
+
+:::::::: columns
+::: {.column width="30%"}
+![](images/Members/Mead.jpg){.profile}
+:::
+:::::: {.column width="60%"}
+<div>
+<h3>Mead Arabie <a href="mailto:wmarabie@uab.edu"><i class="fa-regular fa-envelope" style="color: #2ca25f;"></i></a> <!-- 
+    <a href="https://www.linkedin.com/in/aname" target="_blank"><i class="fa-brands fa-linkedin" style="color: #0A66C2;"></i></a>
+    <a href="https://github.com/aname" target="_blank"><i class="fa-brands fa-github" style="color: #ffffff;"></i></a>
+    --></h3>
+::: title
+Undergraduate Student
+:::
+::: interests
+Disease mechanisms
+:::
+</div>
+::::::
+::::::::
+
+:::::::: columns
+::: {.column width="30%"}
+![](images/Members/Lauren.jpg){.profile}
+:::
+:::::: {.column width="60%"}
+<div>
+<h3>Lauren Maxson <a href="mailto:lmmaxson@uab.edu"><i class="fa-regular fa-envelope" style="color: #2ca25f;"></i></a> <!-- 
+    <a href="https://www.linkedin.com/in/aname" target="_blank"><i class="fa-brands fa-linkedin" style="color: #0A66C2;"></i></a>
+    <a href="https://github.com/aname" target="_blank"><i class="fa-brands fa-github" style="color: #ffffff;"></i></a>
+    --></h3>
+::: title
+Undergraduate Student
+:::
+::: interests
+Disease mechanisms
+:::
+</div>
+::::::
+::::::::
+
+:::::::: columns
+::: {.column width="30%"}
+![](images/Members/Omar.jpg){.profile}
+:::
+:::::: {.column width="60%"}
+<div>
+<h3>Omar Munir <a href="mailto:oamunir@uab.edu"><i class="fa-regular fa-envelope" style="color: #2ca25f;"></i></a> <!-- 
+    <a href="https://www.linkedin.com/in/aname" target="_blank"><i class="fa-brands fa-linkedin" style="color: #0A66C2;"></i></a>
+    <a href="https://github.com/aname" target="_blank"><i class="fa-brands fa-github" style="color: #ffffff;"></i></a>
+    --></h3>
+::: title
+Undergraduate Student
+:::
+::: interests
+Disease mechanisms
+:::
+</div>
+::::::
+::::::::
+
+:::::::: columns
+::: {.column width="30%"}
+![](images/Members/Cody.jpg){.profile}
+:::
+:::::: {.column width="60%"}
+<div>
+<h3>Cody Serena <a href="mailto:cbserena@uab.edu"><i class="fa-regular fa-envelope" style="color: #2ca25f;"></i></a> <!-- 
+    <a href="https://www.linkedin.com/in/aname" target="_blank"><i class="fa-brands fa-linkedin" style="color: #0A66C2;"></i></a>
+    <a href="https://github.com/aname" target="_blank"><i class="fa-brands fa-github" style="color: #ffffff;"></i></a>
+    --></h3>
+::: title
+Undergraduate Student
+:::
+::: interests
+Disease mechanisms
+:::
+</div>
+::::::
+::::::::
+
+:::::::: columns
+::: {.column width="30%"}
+![](images/Members/0.jpg){.profile}
+:::
+:::::: {.column width="60%"}
+<div>
+<h3>Kaiya Dixon <a href="mailto:kgdixon@uab.edu"><i class="fa-regular fa-envelope" style="color: #2ca25f;"></i></a> <!-- 
+    <a href="https://www.linkedin.com/in/aname" target="_blank"><i class="fa-brands fa-linkedin" style="color: #0A66C2;"></i></a>
+    <a href="https://github.com/aname" target="_blank"><i class="fa-brands fa-github" style="color: #ffffff;"></i></a>
+    --></h3>
+::: title
+Undergraduate Student
+:::
+::: interests
+Disease mechanisms
+:::
+</div>
+::::::
+::::::::
+
+
+-----------------------------------------------------
+<a class="Alumni-nav" href="alumni.html"> Alumni </a>
