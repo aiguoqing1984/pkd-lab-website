@@ -22,7 +22,7 @@
 ![](images/Members/Arnav.jpg){.profile}
 :::
 
-:::::: {.column width="40%"}
+:::::: {.column width="70%"}
 <div>
 
 <h3>Arnav</h3>
@@ -31,6 +31,27 @@ Undergraduate Student
 ::: 
 ::: interests
 Kidney organoids · Kidney disease · Genomics
+:::
+
+</div>
+::::::
+::::::::
+
+:::::::: columns
+::: {.column width="20%"}
+![](images/Members/Palak.jpg){.profile}
+:::
+
+:::::: {.column width="70%"}
+<div>
+
+<h3>Palak Desai</h3>
+::: title
+Undergraduate Student
+:::
+
+::: interests
+Disease mechanisms
 :::
 
 </div>

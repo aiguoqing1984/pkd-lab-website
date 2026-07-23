@@ -29,7 +29,11 @@ title: "genomics"
     background:#2ca25f;
     color:white;
 }
-
+.research-video {
+    width: 500px;
+    max-width: 100%;
+    aspect-ratio: 16/9;
+}
 
 </style>
 ```
@@ -51,9 +55,23 @@ title: "genomics"
 Using single-cell RNA sequencing and ATAC sequencing, we characterize cell-type specific regulatory programs.
 :::
 
-::: {.column width="40%"}
+::: {.column width="20%"}
 ![](images/f.png)
 :::
 :::::
 
+::::: columns
+::: {.column width="60%"}
+Using single-cell RNA sequencing and ATAC sequencing, we characterize cell-type specific regulatory programs.
+:::
+
+::: {.column width="40%"}
+<iframe 
+    class="research-video"
+    src="https://www.youtube.com/embed/eVEDw1YykME" 
+    frameborder="0" 
+    allowfullscreen>
+</iframe>
+:::
+:::::
 

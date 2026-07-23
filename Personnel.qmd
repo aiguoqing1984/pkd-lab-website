@@ -37,13 +37,17 @@ title: "Personnel"
     transform:translateY(-2px);
 }
 
-
+h2 {border-radius: 2px;
+}
 
 
 </style>
 ```
 
-## Principal Investigator
+<h2>Principal Investigator</h2>
+
+::: section-divider
+:::
 
 :::::::: columns
 ::: {.column width="30%"}
@@ -68,6 +72,9 @@ Kidney organoids · Kidney disease · Genomics
 ::::::::
 
 ## Staff
+
+::: section-divider
+:::
 
 :::::::: columns
 ::: {.column width="30%"}
@@ -96,10 +103,10 @@ Responsible for laboratory management, colony, and daily operations.
 ![](images/Members/Alex.jpg){.profile}
 :::
 
-:::: {.column width="60%"}
+:::::: {.column width="60%"}
 <div>
 
-<h3>Alex <a href="mailto:aig@uab.edu"><i class="fa-regular fa-envelope" style="color: #2ca25f;"></i></a> <a href="https://github.com/yourname" target="_blank"><i class="fa-brands fa-github" style="color: white;" ></i></a> <a href="https://orcid.org/0009-0008-1691-8437" target="_blank"><i class="fa-brands fa-orcid" style="color: #A6CE39;"></i></a> <a href="https://scholar.google.com/citations?user=your-id" target="_blank"><i class="fa-brands fa-google-scholar"></i></a> <!-- 
+<h3>Guoqing (Alex) Ai <a href="mailto:aig@uab.edu"><i class="fa-regular fa-envelope" style="color: #2ca25f;"></i></a> <a href="https://github.com/yourname" target="_blank"><i class="fa-brands fa-github" style="color: white;" ></i></a> <a href="https://orcid.org/0009-0008-1691-8437" target="_blank"><i class="fa-brands fa-orcid" style="color: #A6CE39;"></i></a> <a href="https://scholar.google.com/citations?user=your-id" target="_blank"><i class="fa-brands fa-google-scholar"></i></a> <!-- 
     其他社交平台
     <a href="https://www.linkedin.com/in/yourname" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
     <a href="https://github.com/yourname" target="_blank"><i class="fa-brands fa-github" style="color: #ffffff;"></i></a>
@@ -113,6 +120,7 @@ Responsible for laboratory management, colony, and daily operations.
 ::: title
 Research Technician
 :::
+
 ::: bio
 interests Single-cell RNA-seq · Single-cell ATAC-seq · Computational biology
 :::
@@ -122,6 +130,9 @@ interests Single-cell RNA-seq · Single-cell ATAC-seq · Computational biology
 ::::::::
 
 ## Students
+
+::: section-divider
+:::
 
 :::::::: columns
 ::: {.column width="30%"}
@@ -200,31 +211,6 @@ Disease mechanisms
 
 :::::::: columns
 ::: {.column width="30%"}
-![](images/Members/Palak.jpg){.profile}
-:::
-
-:::::: {.column width="60%"}
-<div>
-
-<h3>Palak Desai <a href="mailto:phdesai@uab.edu"><i class="fa-regular fa-envelope" style="color: #2ca25f;"></i></a> <!-- 
-    <a href="https://www.linkedin.com/in/aname" target="_blank"><i class="fa-brands fa-linkedin" style="color: #0A66C2;"></i></a>
-    <a href="https://github.com/aname" target="_blank"><i class="fa-brands fa-github" style="color: #ffffff;"></i></a>
-    --></h3>
-
-::: title
-Undergraduate Student
-:::
-
-::: interests
-Disease mechanisms
-:::
-
-</div>
-::::::
-::::::::
-
-:::::::: columns
-::: {.column width="30%"}
 ![](images/Members/Ray.jpg){.profile}
 :::
 
@@ -246,25 +232,29 @@ Disease mechanisms
 
 </div>
 ::::::
-
 ::::::::
 
 :::::::: columns
 ::: {.column width="30%"}
 ![](images/Members/Mead.jpg){.profile}
 :::
+
 :::::: {.column width="60%"}
 <div>
+
 <h3>Mead Arabie <a href="mailto:wmarabie@uab.edu"><i class="fa-regular fa-envelope" style="color: #2ca25f;"></i></a> <!-- 
     <a href="https://www.linkedin.com/in/aname" target="_blank"><i class="fa-brands fa-linkedin" style="color: #0A66C2;"></i></a>
     <a href="https://github.com/aname" target="_blank"><i class="fa-brands fa-github" style="color: #ffffff;"></i></a>
     --></h3>
+
 ::: title
 Undergraduate Student
 :::
+
 ::: interests
 Disease mechanisms
 :::
+
 </div>
 ::::::
 ::::::::
@@ -273,18 +263,23 @@ Disease mechanisms
 ::: {.column width="30%"}
 ![](images/Members/Lauren.jpg){.profile}
 :::
+
 :::::: {.column width="60%"}
 <div>
+
 <h3>Lauren Maxson <a href="mailto:lmmaxson@uab.edu"><i class="fa-regular fa-envelope" style="color: #2ca25f;"></i></a> <!-- 
     <a href="https://www.linkedin.com/in/aname" target="_blank"><i class="fa-brands fa-linkedin" style="color: #0A66C2;"></i></a>
     <a href="https://github.com/aname" target="_blank"><i class="fa-brands fa-github" style="color: #ffffff;"></i></a>
     --></h3>
+
 ::: title
 Undergraduate Student
 :::
+
 ::: interests
 Disease mechanisms
 :::
+
 </div>
 ::::::
 ::::::::
@@ -293,18 +288,23 @@ Disease mechanisms
 ::: {.column width="30%"}
 ![](images/Members/Omar.jpg){.profile}
 :::
+
 :::::: {.column width="60%"}
 <div>
+
 <h3>Omar Munir <a href="mailto:oamunir@uab.edu"><i class="fa-regular fa-envelope" style="color: #2ca25f;"></i></a> <!-- 
     <a href="https://www.linkedin.com/in/aname" target="_blank"><i class="fa-brands fa-linkedin" style="color: #0A66C2;"></i></a>
     <a href="https://github.com/aname" target="_blank"><i class="fa-brands fa-github" style="color: #ffffff;"></i></a>
     --></h3>
+
 ::: title
 Undergraduate Student
 :::
+
 ::: interests
 Disease mechanisms
 :::
+
 </div>
 ::::::
 ::::::::
@@ -313,43 +313,52 @@ Disease mechanisms
 ::: {.column width="30%"}
 ![](images/Members/Cody.jpg){.profile}
 :::
+
 :::::: {.column width="60%"}
 <div>
+
 <h3>Cody Serena <a href="mailto:cbserena@uab.edu"><i class="fa-regular fa-envelope" style="color: #2ca25f;"></i></a> <!-- 
     <a href="https://www.linkedin.com/in/aname" target="_blank"><i class="fa-brands fa-linkedin" style="color: #0A66C2;"></i></a>
     <a href="https://github.com/aname" target="_blank"><i class="fa-brands fa-github" style="color: #ffffff;"></i></a>
     --></h3>
+
 ::: title
 Undergraduate Student
 :::
+
 ::: interests
 Disease mechanisms
 :::
+
 </div>
 ::::::
 ::::::::
 
 :::::::: columns
 ::: {.column width="30%"}
-![](images/Members/0.jpg){.profile}
+![](images/Members/Kaiya.jpg){.profile}
 :::
+
 :::::: {.column width="60%"}
 <div>
+
 <h3>Kaiya Dixon <a href="mailto:kgdixon@uab.edu"><i class="fa-regular fa-envelope" style="color: #2ca25f;"></i></a> <!-- 
     <a href="https://www.linkedin.com/in/aname" target="_blank"><i class="fa-brands fa-linkedin" style="color: #0A66C2;"></i></a>
     <a href="https://github.com/aname" target="_blank"><i class="fa-brands fa-github" style="color: #ffffff;"></i></a>
     --></h3>
+
 ::: title
 Undergraduate Student
 :::
+
 ::: interests
 Disease mechanisms
 :::
+
 </div>
 ::::::
 ::::::::
 
-
------------------------------------------------------
+------------------------------------------------------------------------
 
 <a class="Alumni-nav" href="alumni.html"> Alumni </a>

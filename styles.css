@@ -7,10 +7,7 @@ body {
 html {
     overflow-y: scroll;
 }
-/* Rounded Images */
-img.rounded {
-    border-radius: 12px !important;
-}
+
 
 /* Hide page titles */
 #title-block-header {
@@ -18,7 +15,7 @@ img.rounded {
 }
 
 /* Navigation Bar */
-.navbar {background:#121212 ;   }
+.navbar {background:#121212 ;  justify-content: center; }
 
 /* Logo */
 .navbar-logo {
@@ -32,13 +29,13 @@ max-height: 100px;
     font-weight: 600;               /* 字重 300/400/600/700 */
     margin-right: 10px;             /* 与导航的距离 */
 }
-.navbar-brand-container {max-width: calc(100% - 250px) !important;}
-.navbar-collapse{flex: 1; max-width: calc(100% - 250px) !important;
-  justify-content: flex-start; 
+
+.navbar-collapse {
+    flex: 1;
+    max-width: calc(100% - 250px) !important;
 }
-.navbar-nav {
-    width: 100%;;                 /* 不占满 */
-    flex-wrap: nowrap; 
+.navbar-nav { width: 100%;
+    flex-wrap: nowrap;transform: translateX(50px);
 }
 
 /* hover underline */
@@ -57,11 +54,9 @@ max-height: 100px;
     transition:width .25s ease;
 }
 /* active page */
-.nav-link{white-space: nowrap;
+.nav-link{white-space: nowrap; 
     position: relative;
-    margin: 0 18px;
-    color: #ffffff !important;
-    font-size: 1.1rem;
+    margin: 0 10px;
     font-weight: 500;
     transition:
         transform .2s ease,
@@ -69,7 +64,6 @@ max-height: 100px;
 }
 
 .nav-link.active{
-    font-weight:700;
     transform:scale(1.08);
 }
 
@@ -141,9 +135,9 @@ max-height: 100px;
 
 /* 分隔装饰线 */
 .section-divider {
-    width: 60px;
+    width: 101%;
     height: 3px;
-    background: #2ca25f;
-    margin: 30px 0;
-    border-radius: 2px;
+    background: linear-gradient(90deg, #ff007f, #00f0ff);
+    margin: 20px 0;
+    border-radius: 2px;margin-top: -20px; 
 }

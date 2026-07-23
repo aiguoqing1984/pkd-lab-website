@@ -4,7 +4,8 @@ project:
 website:
   title: "Song Lab"
   site-url: https://aiguoqing1984.github.io/pkd-lab-website/
-  navbar:          
+  navbar:   
+    
     pinned: true
     logo: images/logo1.png
     search: false
@@ -12,23 +13,22 @@ website:
       - text: Research
         href: research.qmd
         
-      - text: Personnel
+      - text: Lab Members
         href: Personnel.qmd
         
       - text: Publications
         href: Publications.qmd
 
-      - text: News
+      - text: Honors
         href: News.qmd
 
-      - text: Contact
+      - text: Contact/Join Us
         href: Contact.qmd
         
       - href: gallery.qmd
         text: Lab Gallery
 
-      - href: test.qmd
-        text: test
+
 format:
   html:
     page-layout: full

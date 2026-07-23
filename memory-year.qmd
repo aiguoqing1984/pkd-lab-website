@@ -11,17 +11,13 @@ resources:
 
 <a id="back" href="gallery.html">Gallery</a>
 
-<h1 id="year-title">
-
-</h1>
+<h1 id="year-title"></h1>
 
 ::: {#gallery .gallery}
 :::
 
 ```{=html}
 <style>
-
-
 #year-title {
   position: fixed !important;
   top: 200px;
@@ -31,12 +27,12 @@ resources:
   font-weight: 700;
   letter-spacing: 3px;
   color: #ffffff;
-  /* 光晕效果 */
   text-shadow: 
     0 0 20px rgba(100, 200, 255, 0.8),
     0 0 40px rgba(100, 200, 255, 0.8);
   transition: text-shadow 0.5s ease;
 }
+
 #back {
   position: fixed !important;
   top: 200px;
@@ -51,17 +47,11 @@ resources:
   transition: box-shadow 0.3s ease, background 0.3s ease, transform 0.3s ease;
   animation: breathe 2.5s ease-in-out infinite;
   cursor: pointer;
-
-  /* 固定宽高，正圆形 */
   width: 100px;
   height: 100px;
-  
-  /* 文字居中 */
   display: flex;
   align-items: center;
   justify-content: center;
-  
-  /* 文字样式 */
   text-decoration: none;
   color: #ffffff;
   font-weight: 700;
@@ -86,6 +76,7 @@ resources:
     box-shadow: 0 0 30px rgba(100, 200, 255, 0.3), 0 0 60px rgba(100, 200, 255, 0.12);
   }
 }
+
 .gallery {
   column-count: 3;
   column-gap: 20px;
@@ -100,17 +91,15 @@ resources:
   opacity: 0;
   transform: translateY(16px);
   animation: fade 0.45s forwards;
-  
-  /* 照片光晕 */
   box-shadow: 
     0 4px 20px rgba(0, 0, 0, 0.4),
     0 0 30px rgba(100, 200, 255, 0.03);
   border-radius: 16px;
   transition: box-shadow 0.4s ease, transform 0.4s ease;
+  position: relative;
 }
 
 .item:hover {
-  /* 悬停时照片光晕增强 */
   box-shadow: 
     0 8px 40px rgba(0, 0, 0, 0.5),
     0 0 50px rgba(100, 200, 255, 0.08);
@@ -123,40 +112,126 @@ resources:
   display: block;
   border-radius: 16px;
 }
-@keyframes fade{
-to{opacity:1;transform:none;}
-}
-@media(max-width:1000px){.gallery{column-count:2;}}
-@media(max-width:650px){.gallery{column-count:1;}#year-title{font-size:32px;}}
-</style>
-```
 
-```{=html}
+
+.play-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  z-index: 2;
+  pointer-events: auto;
+}
+
+.play-overlay:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.item video {
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes fade {
+  to { opacity: 1; transform: none; }
+}
+
+@media (max-width: 1000px) {
+  .gallery { column-count: 2; }
+}
+
+@media (max-width: 650px) {
+  .gallery { column-count: 1; }
+  #year-title { font-size: 32px; }
+}
+</style>
+
 <script>
-const params=new URLSearchParams(window.location.search);
-const year=params.get("year");
-document.getElementById("year-title").textContent=year||"Gallery";
+const params = new URLSearchParams(window.location.search);
+const year = params.get("year");
+document.getElementById("year-title").textContent = year || "Gallery";
 
 fetch("memory.json")
-.then(r=>r.json())
-.then(data=>{
- const gallery=document.getElementById("gallery");
- const items=data.filter(x=>String(x.year)===String(year));
- items.forEach((p,i)=>{
-   const d=document.createElement("div");
-   d.className="item";
-   d.style.animationDelay=(i*0.05)+"s";
-   if(p.type==="video"){
-      d.innerHTML=`<video controls preload="metadata">
-      <source src="${p.file}">
-      </video>`;
-   }else{
-      d.innerHTML=`<a href="${p.file}" target="_blank">
-      <img src="${p.file}" loading="lazy">
-      </a>`;
-   }
-   gallery.appendChild(d);
- });
-});
+  .then(r => r.json())
+  .then(data => {
+    const gallery = document.getElementById("gallery");
+    const items = data.filter(x => String(x.year) === String(year));
+    
+    items.forEach((p, i) => {
+      const d = document.createElement("div");
+      d.className = "item";
+      d.style.animationDelay = (i * 0.05) + "s";
+      
+      if (p.type === "video") {
+        
+        const poster = p.file + "#t=1";
+        d.innerHTML = `
+          <video controls preload="none" poster="${poster}" class="lazy-video">
+            <source data-src="${p.file}" type="video/mp4">
+            
+          </video>
+          <div class="play-overlay">▶</div>
+        `;
+        gallery.appendChild(d);
+        
+        const video = d.querySelector('video');
+        const overlay = d.querySelector('.play-overlay');
+        
+        const loadVideo = function(e) {
+          if (e) e.stopPropagation();
+          const source = this.querySelector('source');
+          if (!source.src && source.dataset.src) {
+            source.src = source.dataset.src;
+            this.load();
+          }
+          if (this.paused) {
+            this.play();
+          }
+          
+          overlay.style.display = 'none';
+        };
+        
+        
+        video.addEventListener('play', function() {
+          overlay.style.display = 'none';
+        });
+        
+        video.addEventListener('pause', function() {
+          
+          if (!this.ended) {
+            overlay.style.display = 'flex';
+          }
+        });
+        
+        video.addEventListener('ended', function() {
+          overlay.style.display = 'flex';
+        });
+        
+        video.addEventListener('click', loadVideo);
+        overlay.addEventListener('click', function(e) {
+          e.stopPropagation();
+          loadVideo.call(video, e);
+        });
+        
+      } else {
+        d.innerHTML = `<a href="${p.file}" target="_blank">
+          <img src="${p.file}" loading="lazy">
+        </a>`;
+        gallery.appendChild(d);
+      }
+    });
+  });
 </script>
-```
